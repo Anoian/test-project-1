@@ -1,0 +1,55 @@
+.temperatureIcon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 45px;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #575757;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /*
+    On the element in index.tsx we use "rotate", which is a separate property than transform. https://css-tricks.com/almanac/properties/r/rotate/
+    By rotating back 142deg we can get rid of one calculation and make the javascript simpler
+  */
+  transform: rotate(-142deg);
+}
+
+.hand {
+  background-color: #2A2A2A;
+  width: 2px;
+  height: 16px;
+}
+
+.foot {
+  width: 2px;
+  height: 12%;
+  background-color: #2A2A2A;
+  position: absolute;
+  bottom: 2px;
+}
+
+.min {
+  left: 7px;
+  rotate: 38deg;
+}
+
+.max {
+  right: 7px;
+  rotate: -38deg;
+}
+
+.error {
+  color: red;
+  font-size: 9px;
+  font-family: "Ubuntu", sans-serif;
+}
