@@ -1,0 +1,15 @@
+.tile {
+    background: #F2F2F2;
+    border-radius: 2px;
+    width: 90px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Padding exactly like layout */
+    /* padding: 18px 20px 18px 17px; */
+    /* Fixed version */
+    padding: 18px 20px;
+    box-sizing: border-box;
+    word-break: break-word;
+}
