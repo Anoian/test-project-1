@@ -1,0 +1,10 @@
+{
+  // the number of spaces a tab is equal to
+  "editor.tabSize": 2,
+
+  // insert spaces when pressing Tab
+  "editor.insertSpaces": true,
+
+  // whether to override tabSize based on a file's existing indent level
+  "editor.detectIndentation": false,
+}
