@@ -10,8 +10,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To run the project locally, follow these steps:
 
-Install the dependencies by running `npm install`.
-Start the development server with `npm start`. The project will be available at `localhost:3000`.
+1. Install the dependencies by running `npm install`.
+2. Start the development server with `npm start`. The project will be available at `localhost:3000`.
 
 
 ## Available Commands
