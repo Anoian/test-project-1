@@ -45,8 +45,8 @@ const TemperatureIcon = React.memo((props: TemperatureIconProps) => {
       <div className={styles.circle} style={{ rotate: `${rotationLimitedToRange}deg` }} data-testid="circle">
         <div className={styles.hand} />
       </div>
-      <div className={classNames(styles.foot, styles.min)} />
-      <div className={classNames(styles.foot, styles.max)} />
+      <div className={classNames(styles.limiter, styles.min)} />
+      <div className={classNames(styles.limiter, styles.max)} />
     </div>
   );
 });

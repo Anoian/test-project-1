@@ -6,10 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Padding exactly like layout */
-    /* padding: 18px 20px 18px 17px; */
-    /* Fixed version */
     padding: 18px 20px;
+    /* Padding exactly like layout: */
+    /* padding: 18px 20px 18px 17px; */
     box-sizing: border-box;
     word-break: break-word;
 }

@@ -9,7 +9,7 @@
 .circle {
   border-radius: 50%;
   height: 45px;
-  aspect-ratio: 1 / 1;
+  width: 45px;
   background-color: #fff;
   box-sizing: border-box;
   border: 1px solid #575757;
@@ -30,7 +30,7 @@
   height: 16px;
 }
 
-.foot {
+.limiter {
   width: 2px;
   height: 12%;
   background-color: #2A2A2A;

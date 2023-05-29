@@ -42,7 +42,7 @@ Before starting the implementation, I spent time contemplating the following:
 
 1. How to place the hand inside the circle?
    - I decided to position the hand at the top of the circle and then rotating the entire circle, including the hand. This approach works well when dealing with values ranging from 0 to the maximum value. To achieve this, I utilized both the rotate and transform: rotate() CSS properties (Move it back with one of the properties and then forward with the other with a value between 0 and maxValue). While this may not be a conventional approach, it simplifies the calculations by not having to subtract at the end. An alternative approach would involve introducing another parent element and applying the transform: rotate property to both. However, I opted not to pursue this approach.
-2. How to position the min and max limiters/feet on the outside of the circle?
+2. How to position the min and max limiters on the outside of the circle?
    - To achieve this, I utilized absolute positioning and the transform: rotate property.
 3. Project setup considerations
    - I chose to use Create React App because of my familiarity with React compared to Vue or Angular. Alternatively, I could have used Next.js or set up a custom webpack configuration, but these options seemed less favorable.
@@ -54,23 +54,25 @@ Before starting the implementation, I spent time contemplating the following:
 During the implementation, I made the following choices and improvements:
 
 1. Enabled absolute imports for better code organization. Refer to the [Create React App documentation](https://create-react-app.dev/docs/importing-a-component/#absolute-import) for more details.
-2. Moved the Tile component inside the `libs/ui` directory to promote reusability. Typically, UI libraries are created or used to facilitate reuse across the project.
-3. Implemented error handling in the TemperatureIcon component. It now displays an error if the maxValue is smaller than the minValue. Additionally, if the value exceeds the maxValue or falls below the minValue, it is automatically limited to the defined range without displaying an error.
-4. Utilized React.memo for the TemperatureIcon component. Since it performs calculations and renders HTML elements without dynamic behavior, memoization ensures that the same input always produces the same output. While this can be considered a form of pre-optimization, it probably improves performance in certain scenarios.
-5. Switched to CSS modules to scope CSS styles to their respective components, enhancing maintainability and preventing style conflicts.
-6. Tested the project in both Chrome and Firefox to ensure cross-browser compatibility.
-7. Wrote tests for every component, focusing on functionality rather than CSS, which should be tested using end-to-end CSS regression tests (which I didn't create for this project).
-8. Moved the TemperatureIcon component inside an `icons` folder to accommodate potential future additions of more icons and improve organization.
-9. Restructured the default project structure created by Create React App, including the placement and naming of `global.css` and the positioning of the `App` component.
-10. Utilized the [Ubuntu](https://fonts.google.com/specimen/Ubuntu) font for the text, which I believe matches the font used in the layout (though I cannot confirm this with certainty).
+2. Used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+3. Moved the Tile component inside the `libs/ui` directory to promote reusability. Typically, UI libraries are created or used to facilitate reuse across the project.
+4. Implemented error handling in the TemperatureIcon component. It now displays an error if the maxValue is smaller than the minValue. Additionally, if the value exceeds the maxValue or falls below the minValue, it is automatically limited to the defined range without displaying an error.
+5. Utilized React.memo for the TemperatureIcon component. Since it performs calculations and renders HTML elements without dynamic behavior, memoization ensures that the same input always produces the same output. While this can be considered a form of pre-optimization, it probably improves performance in certain scenarios.
+6. Switched to CSS modules to scope CSS styles to their respective components, enhancing maintainability and preventing style conflicts.
+7. Tested the project in both Chrome and Firefox to ensure cross-browser compatibility.
+8. Wrote tests for every component, focusing on functionality rather than CSS, which should be tested using end-to-end CSS regression tests (which I didn't create for this project).
+9. Moved the TemperatureIcon component inside an `icons` folder to accommodate potential future additions of more icons and improve organization.
+10. Restructured the default project structure created by Create React App, including the placement and naming of `global.css` and the positioning of the `App` component.
+11. Utilized the [Ubuntu](https://fonts.google.com/specimen/Ubuntu) font for the text, which I believe matches the font used in the layout (though I cannot confirm this with certainty).
 
 ### Retrospective - Areas for Improvement
 
 Upon reflection, the following areas could be improved:
 
-1. The alignment of the limiters/feet with the min and max values may appear slightly off due to pixelation issues. Exploring alternative methods for creating these elements could potentially resolve this.
+1. The alignment of the limiters with the min and max values may appear slightly off due to pixelation issues. Exploring alternative methods for creating these elements could potentially resolve this.
 2. The error text appears differently sized on my computer in Firefox and Chrome. This could be related to font rendering issues specific to Linux or Flatpak.
 3. Writing end-to-end tests would provide additional test coverage and ensure the integrity of the entire application.
 
 ## Contact
+
 If you have any questions, please feel free to contact me at test-project-1@fabianletsch.de.
