@@ -57,7 +57,7 @@ During the implementation, I made the following choices and improvements:
 2. Used [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 3. Moved the Tile component inside the `libs/ui` directory to promote reusability. Typically, UI libraries are created or used to facilitate reuse across the project.
 4. Implemented error handling in the TemperatureIcon component. It now displays an error if the maxValue is smaller than the minValue. Additionally, if the value exceeds the maxValue or falls below the minValue, it is automatically limited to the defined range without displaying an error.
-5. Utilized React.memo for the TemperatureIcon component. Since it performs calculations and renders HTML elements without dynamic behavior, memoization ensures that the same input always produces the same output. While this can be considered a form of pre-optimization, it probably improves performance in certain scenarios.
+5. Utilized React.memo for the TemperatureIcon component. Since it performs calculations and renders HTML elements without dynamic behavior, which means the same input always produces the same output, the calculations for subsequent renders can be skipped, as long as the props don't change. While this can be considered a form of pre-optimization, it probably improves performance in certain scenarios.
 6. Switched to CSS modules to scope CSS styles to their respective components, enhancing maintainability and preventing style conflicts.
 7. Tested the project in both Chrome and Firefox to ensure cross-browser compatibility.
 8. Wrote tests for every component, focusing on functionality rather than CSS, which should be tested using end-to-end CSS regression tests (which I didn't create for this project).
