@@ -2,8 +2,6 @@
 
 This is a test project that I created for an application. I enjoyed working on this project and have decided to upload it to my GitHub.
 
-You can see the deployed build [here](https://main--merry-blancmange-590418.netlify.app/).
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the TypeScript preset.
 
 ## Getting Started
